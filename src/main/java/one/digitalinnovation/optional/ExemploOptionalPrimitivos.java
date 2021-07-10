@@ -1,0 +1,21 @@
+package one.digitalinnovation.optional;
+
+import java.util.Optional;
+import java.util.OptionalDouble;
+import java.util.OptionalInt;
+import java.util.OptionalLong;
+
+public class ExemploOptionalPrimitivos {
+    public static void main(String[] args) {
+
+        //Só aceita inteiro. Se tentar passa String dar erro, se tentar passar Double, Long ou qualquer outro tipo primitivo vai dar erro
+        System.out.println("****** Valor Inteiro opcional*****");
+        OptionalInt.of(12).ifPresent(System.out::println);
+
+        System.out.println("****** Valor decimal opcional*****");
+        OptionalDouble.of(55.2).ifPresent(System.out::println);
+
+        System.out.println("****** Valor longo opcional*****");
+        OptionalLong.of(23L).ifPresent(System.out::println);
+    }
+}
